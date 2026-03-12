@@ -13,7 +13,7 @@
 @-moz-document domain("www.reddit.com"), domain("old.reddit.com") {
 
   /* Disable vote arrows */
-    .midcol, .arrow {
+    .midcol, .arrow, .comment.noncollapsed .midcol {
         visibility: hidden;
         margin: 0px 0px;
     }
@@ -53,7 +53,13 @@
     }
 .res .res-commentBoxes .comment .comment .comment,.res .res-commentBoxes .comment .comment .comment .comment .comment,.res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment, .res .res-commentBoxes .comment .comment .comment .comment .comment .comment .comment .comment .comment {
   background-color: var(--gray-0) !important;
-}
+		}
+
+    .comments-page .link, div.content, .titlebox, .link, .link::before,  .link::after {
+      background: transparent !important;
+      border-bottom: none !important;
+      border-right: none !important;
+    }
 
     &, .md {
       color: var(--text-normal) !important;
@@ -102,39 +108,46 @@
       color: var(--text-med) !important;
       font-size: 14px;
     }
-    
-    
+
+
     .search-expando.collapsed::before {
       background: linear-gradient(to bottom,rgba(0, 0, 0, 0) 0%,#000 100%);
     }
-    
-    .side div.spacer:first-of-type {
+
+    .side div.spacer:first-of-type, .side .md, .sidecontentbox .content{
         background: #000;
   			border-color: #000;
     }
-    
-    
-    
+
+
+
 
     /* General }}} */
 
     /* Header */
-    #header, #header-bottom-right {
+    #header::after {
+        visibility: hidden !important;
+        background: transparent !important;
+    }
+    #header {
       & {
-        background: var(--gray-1) !important;
+        background: var(--gray-0) !important;
         border-bottom: 2px solid var(--gray-0);
         display: flex;
         flex-wrap: wrap;
-        position: sticky;
-        top: 0;
+        position: sticky !important;
+        top: 0 !important;
+        height: 1% !important;
       }
-      a {
+
+      a, #header-bottom-right {
         background: transparent !important;
       }
 
       #sr-header-area{
 
         & {
+          visibility: hidden;
           align-items: center;
           background: var(--gray-2) !important;
           border: 0;
@@ -242,6 +255,12 @@
         .tabmenu {
           & {
             margin: 0;
+            background-color: transparent;
+            text-align: center;
+            position: static ;
+            left: 0px !important ;
+            right: 0px !important;
+            top: 0px !important;
           }
 
           li a {
@@ -310,6 +329,10 @@
 
       .md {
         font-size: 13px;
+      }
+
+      .md h2 + ul, .md h2 + ol {
+        background: transparent !important;
       }
 
       .sidebox .spacer {
@@ -651,12 +674,15 @@
     }
 
     /* Link/comment/message */
-    .thing, .commentarea .thing {
 
+    .thing, .commentarea .thing {
+    	& {
+      	background-color: var(--gray-0) !important;
+    	}
       &.link {
 
         & {
-          background-color: transparent;
+          background-color: var(--gray-0) !imporant;
           border: none;
           display: flex !important;
           margin: 0;
@@ -786,7 +812,7 @@
       &.comment {
 
         & {
-          background-color: transparent;
+          background-color: transparent !important;
           width: max-content;
         }
 
@@ -859,7 +885,8 @@
           }
 
           .midcol {
-            display: none;
+            display: none !important;
+            float: none !important;
           }
         }
       }
@@ -1036,6 +1063,7 @@
 
     .archived-infobar ~ div .midcol .arrow { /* hide voting on archived posts */
       visibility: hidden;
+      float: none;
     }
 
     .modactionlisting a { /* moderation log */
