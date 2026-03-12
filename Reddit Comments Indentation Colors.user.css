@@ -26,12 +26,12 @@
     --divider-color: var(--default-color);
 
   }
-      .thing.comment {
-          border: 1px solid black;
-          border-left-width: 4px;
-          border-right-width: 0px;
-          border-top-width: 0px;
-          border-bottom-width: 0px;
+      .thing.comment, .commentarea .child .thing.comment, .commentarea .child .thing {
+          border: 1px solid black !important;
+          border-left-width: 4px !important;
+          border-right-width: 0px !important;
+          border-top-width: 0px !important;
+          border-bottom-width: 0px !important;
           border-color: var(--color1) !important;
       }
       .thing.comment .thing.comment {
