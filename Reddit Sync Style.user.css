@@ -109,7 +109,6 @@
     input[type="text"] {
       border-radius: 2px;
       color: var(--text-med) !important;
-      font-size: 14px;
     }
 
 
@@ -155,7 +154,6 @@
           background: var(--gray-2) !important;
           border: 0;
           display: flex;
-          font-size: 12px;
           padding: 3px 0;
           width: 100%;
         }
@@ -164,7 +162,6 @@
         a, .dropdown.srdrop .selected {
           color: var(--text-med) !important;
           background: transparent !important;
-          font-size: 13px;
           text-decoration: none;
         }
 
@@ -187,7 +184,6 @@
             background: var(--gray-0) !important;
             border: 1px solid var(--gray-2);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6), 0 6px 6px rgba(0, 0, 0, 0.9);
-            font-size: 12px;
             max-height: 50vh;
             min-height: min-content;
             overflow: clip auto;
@@ -246,7 +242,6 @@
 
         .pagename {
           & {
-            font-size: 22px;
             font-variant: normal;
             margin: 0 10px;
             position: initial !important;
@@ -271,7 +266,6 @@
           li a {
             background: none;
             color: var(--text-normal) !important;
-            font-size: 14px;
             font-weight: initial;
             text-transform: uppercase;
           }
@@ -293,7 +287,6 @@
           align-items: center;
           background: none;
           display: flex;
-          font-size: 14px;
           margin-left: auto;
           padding: 0 8px;
           position: initial;
@@ -336,9 +329,6 @@
 				color: var(--text-normal) !important;
       }
 
-      .md {
-        font-size: 13px;
-      }
 
       .md h2 + ul, .md h2 + ol, .md td {
         background: transparent !important;
@@ -402,7 +392,6 @@
           background: var(--gray-2);
           border: 0;
           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-          font-size: 16px;
           font-weight: 400;
           text-transform: uppercase;
         }
@@ -519,7 +508,6 @@
     /* "sorted by" / "links from"  dropdown menu */
     .dropdown-title.lightdrop {
       &, & ~ div > .selected {
-        font-size: 14px;
         font-weight: bold;
         text-transform: uppercase;
       }
@@ -528,7 +516,6 @@
         a {
           background-color: var(--gray-3);
           color: var(--text-normal) !important;
-          font-size: 13px;
           text-transform: uppercase;
         }
 
@@ -563,7 +550,6 @@
       .linefield {
         span.title {
           color: var(--text-normal);
-          font-size: 16px;
         }
 
         &.mobile {
@@ -595,13 +581,11 @@
           background: var(--gray-3);
           border: none;
           color: var(--text-normal) !important;
-          font-size: 14px;
           padding-bottom: 5px;
         }
 
         .selected a {
           background: var(--gray-1);
-          font-size: 18px;
         }
       }
 
@@ -636,7 +620,6 @@
           background-color: var(--gray-2);
           border: 1px solid var(--gray-3);
           color: var(--text-med) !important;
-          font-size: 16px;
           padding: 3px;
           text-transform: uppercase;
         }
@@ -712,18 +695,15 @@
 
         .domain a {
           color: var(--text-dark);
-          font-size: 12px;
         }
 
         .score {
-          font-size: 16px;
           padding: 8px 0;
         }
 
         .title {
           & {
             color: var(--text-normal) !important;
-            font-size: 18px;
           }
 
           &:hover {
@@ -782,7 +762,6 @@
         .md-container h1 {
           &, strong {
             color: var(--text-normal);
-            font-size: 22px;
             font-weight: 300;
           }
 
@@ -794,7 +773,6 @@
         .usertext-body .md {
           background: none;
           border: 1px dotted var(--gray-a0);
-          font-size: 16px;
         }
 
 
@@ -832,7 +810,6 @@
         }
 
         .usertext-body.md-container .md {
-          font-size: 1.15em;
         }
 
         .usertext.grayed .usertext-body, .usertext.grayed .usertext-body .md {
@@ -903,14 +880,12 @@
       & {
         .entry .flat-list.buttons { /* action menu */
           & {
-            font-size: 12px;
             margin: 5px 0 0 12px;
             padding: 0;
           }
 
           li a {
             color: var(--text-dark) !important;
-            font-size: 12px;
             padding: 6px 4px;
           }
 
@@ -1023,7 +998,6 @@
 
       &-result :link > mark {
         color: var(--blue-2);
-        font-size: 1.05em;
       }
 
       &-expando.collapsed::before {
@@ -1039,7 +1013,6 @@
       border-radius:3px;
       border:1px solid;
       display:inline-block;
-      font-size:10px;
       line-height:14px;
       padding:0 4px
     }
