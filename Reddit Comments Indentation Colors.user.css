@@ -1,0 +1,61 @@
+/* ==UserStyle==
+
+@name Reddit Comments Indentation Colors
+@version          1.0
+==/UserStyle== */
+
+
+@-moz-document domain("www.reddit.com"), domain("old.reddit.com") {
+
+  /* COLOR DEFINITIONS */
+  :root {
+
+    /* Comments border colors */
+    --border-transparency: .5;
+    --arrow-offset: 1em;
+    --default-color: rgba(99, 99, 99, var(--border-transparency));
+    --color1: #a51d2d;
+    --color2: rgb(0,69,22);
+    --color3: #ad7200;
+    --color4: rgb(26,95,180);
+    --color5: rgb(97,53,131);
+    --color6: rgb(99,69,44);
+    --color7: rgb(173,114,0);
+    --color8: rgb(123,40,0);
+    --color9: rgb(165,29,45);
+    --divider-color: var(--default-color);
+
+  }
+      .thing.comment {
+          border: 1px solid black;
+          border-left-width: 4px;
+          border-right-width: 0px;
+          border-top-width: 0px;
+          border-bottom-width: 0px;
+          border-color: var(--color1) !important;
+      }
+      .thing.comment .thing.comment {
+          border-color: var(--color2) !important;
+      }
+      .thing.comment .thing.comment .thing.comment {
+          border-color: var(--color3) !important;
+      }
+      .thing.comment .thing.comment .thing.comment .thing.comment {
+          border-color: var(--color4) !important;
+      }
+      .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+          border-color: var(--color5) !important;
+      }
+       .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+          border-color: var(--color6) !important;
+      }
+       .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+          border-color: var(--color7) !important;
+      }
+       .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+          border-color: var(--color8) !important;
+      }
+       .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+          border-color: var(--color9) !important;
+      }
+}
