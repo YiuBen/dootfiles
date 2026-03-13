@@ -10,7 +10,7 @@
 ==/UserStyle== */
 
 @-moz-document domain("www.reddit.com"), domain("old.reddit.com") {
-  
+
 
 /*######## COLORED COMMENTS #########*/
     /* COLOR DEFINITIONS */
@@ -75,7 +75,7 @@
       }
 
 /*####### STYLE FIXES ########*/
-  
+
   /* COLOR DEFINITIONS */
   :root {
 
@@ -103,17 +103,24 @@
 
 
   }
+  body{
+      background-color: var(--gray-0) !important;
+      background: var(--gray-0) !important;
+      color: var(--text-normal) !important;
+  }
 
   body[class] {
 
     /* White text on black*/
-    &,
     .md,
     textarea,
     .side,
     #header,
     #header-bottom-right,
-    #searchexpando{
+    #searchexpando,
+    .grippy,
+    .tabmenu li a,
+    .trophy-area .content{
       background-color: var(--gray-0) !important;
       background: var(--gray-0) !important;
       color: var(--text-normal) !important;
@@ -126,7 +133,8 @@
     .sidebox /*submit buttons*/,
     .arrow /*voting*/,
     .read-next /*recos*/,
-    .infobar.listingsignupbar, .commentsignupbar /*ad*/{
+    .infobar.listingsignupbar, .commentsignupbar /*ad*/,
+    .rank /*post rank*/{
       visibility: hidden !important;
       height: 0px !important;
       font-size: 0px !important;
@@ -135,7 +143,8 @@
 
     /*White text*/
     .pagename a /*sub name*/,
-    .title{
+    .title,
+    .trophy-name{
       color: var(--text-normal) !important;
     }
 
@@ -145,7 +154,8 @@
     input,
     .side .md,
     .reddit-infobar,
-    .flaircolordark{
+    .flaircolordark,
+    .searchpane{
       color: var(--gray-5) !important;
       background-color: transparent !important;
     }
@@ -157,7 +167,8 @@
 
 
     /*Secondary links*/
-    .side a {
+    .side a,
+    .buttons li a{
       color: var(--gray-6) !important;
     }
 
@@ -173,17 +184,24 @@
     .linkinfo,
     td,
     th,
-    .flairrichtext{
+    .flairrichtext,
+    #header{
       border-color: var(--gray-3) !important;
+    }
+
+    /*Border (Gray)*/
+    .tabmenu li.selected a{
+      border-bottom-color: var(--gray-5) !important;
     }
 
     /*Left Border remove*/
     .comment .child {
       border-left: none !important;
     }
-    
+
     /*Remove borders*/
-    .flair {
+    .flair,
+    .grippy::after {
       border: none !important;
     }
 
@@ -197,4 +215,5 @@
       width: 36px !important;
       top: 0px !important;
     }
-
+ 	}
+}
