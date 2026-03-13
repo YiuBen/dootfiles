@@ -1,0 +1,200 @@
+/* ==UserStyle==
+@name           Reddit AMOLED Orange Style
+@version        1.0.0
+@description		Orange AMOLED with colored comments
+@author         YiuBen
+@homepageURL    https://github.com/YiuBen/dootfiles
+@preprocessor   less
+
+@var checkbox thumbnails "Show thumbnails" 1
+==/UserStyle== */
+
+@-moz-document domain("www.reddit.com"), domain("old.reddit.com") {
+  
+
+/*######## COLORED COMMENTS #########*/
+    /* COLOR DEFINITIONS */
+  :root {
+
+    /* Comments border colors */
+    --border-transparency: .5;
+    --arrow-offset: 1em;
+    --default-color: rgba(99, 99, 99, var(--border-transparency));
+    --color1: #a51d2d;
+    --color2: rgb(0,69,22);
+    --color3: #ad7200;
+    --color4: rgb(26,95,180);
+    --color5: rgb(97,53,131);
+    --color6: rgb(99,69,44);
+    --color7: rgb(173,114,0);
+    --color8: rgb(123,40,0);
+    --color9: rgb(165,29,45);
+    --divider-color: var(--default-color);
+
+  }
+      .thing.comment, .commentarea .child .thing.comment, .commentarea .child .thing{
+          border: 1px solid transparent !important;
+          border-left-width: 4px !important;
+          border-right-width: 0px !important;
+          border-top-width: 0px !important;
+          border-bottom-width: 0px !important;
+          border-color: var(--color1) !important;
+        	color: var(--color1) !important;
+      }
+      .thing.comment .thing.comment, .thing.comment .thing.comment .expand a{
+          border-color: var(--color2) !important;
+        	color: var(--color2) !important;
+      }
+      .thing.comment .thing.comment .thing.comment{
+          border-color: var(--color3) !important;
+        	color: var(--color3) !important;
+      }
+      .thing.comment .thing.comment .thing.comment .thing.comment{
+          border-color: var(--color4) !important;
+        	color: var(--color4) !important;
+      }
+      .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+          border-color: var(--color5) !important;
+        	color: var(--color5) !important;
+      }
+       .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+          border-color: var(--color6) !important;
+        	color: var(--color6) !important;
+      }
+       .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment{
+          border-color: var(--color7) !important;
+        	color: var(--color7) !important;
+      }
+       .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment{
+          border-color: var(--color8) !important;
+        	color: var(--color8) !important;
+      }
+       .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment .thing.comment {
+          border-color: var(--color9) !important;
+        	color: var(--color9) !important;
+      }
+
+/*####### STYLE FIXES ########*/
+  
+  /* COLOR DEFINITIONS */
+  :root {
+
+    --url: #e66100; /* Usernames & Links*/
+
+    --gray-0: #000;
+    --gray-1: #121212;
+    --gray-2: #232323;
+    --gray-3: #343434;
+    --gray-4: #454545;
+    --gray-5: #9a9996;
+    --gray-6: #c0bfbc;
+
+    --gray-a0: #1e1e1e;
+    --blue-0: #4ac;
+    --blue-1: #369;
+    --blue-2: #2c89f5;
+    --red: #d3391a;
+    --dark-red: #440202;
+    --text-normal: #fff;
+    --text-normal-hover: #f6f5f4;
+    --text-med: hsl(0, 0%, 85%);
+    --text-dark: hsl(0, 0%, 45%);
+    --text-dark-hover: var(--text-normal);
+
+
+  }
+
+  body[class] {
+
+    /* White text on black*/
+    &,
+    .md,
+    textarea,
+    .side,
+    #header,
+    #header-bottom-right,
+    #searchexpando{
+      background-color: var(--gray-0) !important;
+      background: var(--gray-0) !important;
+      color: var(--text-normal) !important;
+    }
+
+    /*Removed stuff*/
+    #sr-header-area, /*Subreddits list*/
+    .comment.noncollapsed .buttons /*Comment buttons*/,
+    .domain /*post domain name*/,
+    .sidebox /*submit buttons*/,
+    .arrow /*voting*/,
+    .read-next /*recos*/,
+    .infobar.listingsignupbar, .commentsignupbar /*ad*/{
+      visibility: hidden !important;
+      height: 0px !important;
+      font-size: 0px !important;
+    }
+
+
+    /*White text*/
+    .pagename a /*sub name*/,
+    .title{
+      color: var(--text-normal) !important;
+    }
+
+    /*Secondary text*/
+    .linkinfo,
+    .titlebox form.toggle,
+    input,
+    .side .md,
+    .reddit-infobar,
+    .flaircolordark{
+      color: var(--gray-5) !important;
+      background-color: transparent !important;
+    }
+
+    /*Primary links*/
+    a {
+      color: var(--url) !important;
+    }
+
+
+    /*Secondary links*/
+    .side a {
+      color: var(--gray-6) !important;
+    }
+
+    /*Spoiler tag*/
+    .md code {
+      background-color: var(--gray-2) !important;
+      color: var(--gray-2) !important;
+      border: none !important;
+    }
+
+    /*Border (Dark gray)*/
+    .md,
+    .linkinfo,
+    td,
+    th,
+    .flairrichtext{
+      border-color: var(--gray-3) !important;
+    }
+
+    /*Left Border remove*/
+    .comment .child {
+      border-left: none !important;
+    }
+    
+    /*Remove borders*/
+    .flair {
+      border: none !important;
+    }
+
+/*Reddit logo fix*/
+    #header-img {
+      background-image: url(https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-57x57.png) !important;
+      background-position: center !important;
+      background-size: cover;
+      height: 36px !important;
+      margin: 4px 16px;
+      width: 36px !important;
+      top: 0px !important;
+    }
+
