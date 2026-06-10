@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Reddit AMOLED Orange Style
-@version        1.0.0
+@version        1.0.1
 @description		Orange AMOLED with colored comments
 @author         YiuBen
 @homepageURL    https://github.com/YiuBen/dootfiles
@@ -120,7 +120,8 @@
     #searchexpando,
     .grippy,
     .tabmenu li a,
-    .trophy-area .content{
+    .trophy-area .content,
+      .searchpane {
       background-color: var(--gray-0) !important;
       background: var(--gray-0) !important;
       color: var(--text-normal) !important;
@@ -172,11 +173,13 @@
       color: var(--gray-6) !important;
     }
 
-    /*Spoiler tag*/
-    .md code {
+    /*Code paragraph*/
+    .md code, .md pre {
       background-color: var(--gray-2) !important;
-      color: var(--gray-2) !important;
+      color: var(--text-normal-hover) !important;
       border: none !important;
+  		background-color: transparent;
+  		border-radius: 2px;
     }
 
     /*Border (Dark gray)*/
