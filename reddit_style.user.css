@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name           Reddit AMOLED Orange Style
-@version        1.0.1
+@version        1.0.2
 @description		Orange AMOLED with colored comments
 @author         YiuBen
 @homepageURL    https://github.com/YiuBen/dootfiles
@@ -169,7 +169,8 @@
 
     /*Secondary links*/
     .side a,
-    .buttons li a{
+    .buttons li a,
+    .spoiler-stamp {
       color: var(--gray-6) !important;
     }
 
@@ -208,7 +209,10 @@
       border: none !important;
     }
 
-/*Reddit logo fix*/
+
+/* Image fixes */
+
+		/*Reddit logo*/
     #header-img {
       background-image: url(https://www.redditstatic.com/desktop2x/img/favicon/apple-icon-57x57.png) !important;
       background-position: center !important;
@@ -218,5 +222,64 @@
       width: 36px !important;
       top: 0px !important;
     }
+
+    /*Thumbnails*/
+    
+    .link:before, .link .thumbnail {
+      border-radius: 3px;
+      background: transparent url(https://b.thumbs.redditmedia.com/-3KwleH20XZ1b9Cw4lB0L5mEfied_cdwc7p4Tm1hF4M.png) 0 / 538px 373.2px;
+      content: "";
+		}
+    .thumbnail {
+      float: left;
+      font-size: 0;
+      margin-bottom: 2px;
+      margin-right: 5px;
+      margin-top: 0;
+      margin-left: 0;
+      overflow: hidden;
+      width: 70px;
+		}
+    .link .thumbnail.self {
+      background-position: -44px -60px;
+		}
+    .link .thumbnail.spoiler {
+      background: url(https://b.thumbs.redditmedia.com/H8fTLHcMy0mTMKnn8K4cG8M1mgB8Np8GNskdcsZLS3M.png) 10px !important;
+      background-size: 48px !important;
+      background-repeat: no-repeat !important;
+		}
+    .link .thumbnail.default {
+      background-position: -108px -54px;
+		}
+    
+    
+    /*Expand buttons*/
+    .expando-button {
+      margin: 0 !important;
+      margin-left: 6px !important;
+      margin-right: 6px !important;
+      width: 30px !important;
+      height: 30px !important;
+      max-width: 30px !important;
+      max-height: none !important;
+      border-radius: 3px;
+      background: transparent url(https://b.thumbs.redditmedia.com/-3KwleH20XZ1b9Cw4lB0L5mEfied_cdwc7p4Tm1hF4M.png) no-repeat 0 / 359px 248.8px !important;
+  }
+    .expando-button:hover {
+    	background-color: var(--url) !important;
+    }
+    
+    .expando-button.video {
+      background-position: -37px -222px !important;
+    	vertical-align: middle !important;
+    }
+    
+    .expando-button.selftext {
+			background-position: -41px 07px !important;
+      vertical-align: middle !important;
+    }
+
+    /*Expand button*/
+
  	}
 }
