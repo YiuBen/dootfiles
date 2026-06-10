@@ -1,10 +1,9 @@
 /* ==UserStyle==
 @name           Reddit AMOLED Orange Style
-@version        1.0.2
+@version        1.0.1
 @description		Orange AMOLED with colored comments
 @author         YiuBen
 @homepageURL    https://github.com/YiuBen/dootfiles
-@preprocessor   less
 
 @var checkbox thumbnails "Show thumbnails" 1
 ==/UserStyle== */
@@ -202,11 +201,20 @@
     .comment .child {
       border-left: none !important;
     }
+    
+    .thing.comment{
+      margin-top: -10px;
+    }
 
     /*Remove borders*/
     .flair,
     .grippy::after {
       border: none !important;
+    }
+    
+    /*Top of comments*/
+    .tagline {
+        padding-top: 10px;
     }
 
 
@@ -264,7 +272,7 @@
       max-height: none !important;
       border-radius: 3px;
       background: transparent url(https://b.thumbs.redditmedia.com/-3KwleH20XZ1b9Cw4lB0L5mEfied_cdwc7p4Tm1hF4M.png) no-repeat 0 / 359px 248.8px !important;
-  }
+    }
     .expando-button:hover {
     	background-color: var(--url) !important;
     }
@@ -279,7 +287,5 @@
       vertical-align: middle !important;
     }
 
-    /*Expand button*/
-
- 	}
+  }
 }
